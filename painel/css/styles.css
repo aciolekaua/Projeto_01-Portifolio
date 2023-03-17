@@ -489,6 +489,7 @@ a.btn.order {
 
 .menu-acrive::before {
     /*Adcionar Seta para quando estiver selecionado*/
+    content: '> ';
 }
 
 .form-group-login label {

@@ -37,17 +37,17 @@
         </div><!--box-usuairo-->
         <div class="itens-menu">
             <h2>Cadastro</h2>
-            <a href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-depoimentos">Cadastrar Depoimentos</a>
-            <a href="">Cadastrar Cadastrar Serviços</a>
-            <a href="">Cadastrar Slides</a>
+            <a <?php selecionadoMenu('cadastrar-depoimentos'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-depoimentos">Cadastrar Depoimentos</a>
+            <a <?php selecionadoMenu('cadastrar-servicos'); ?> href="">Cadastrar Serviços</a>
+            <a <?php selecionadoMenu('cadastrar-slides'); ?> href="">Cadastrar Slides</a>
             <h2>Gestão</h2>
-            <a href="">Listar Depoimentos</a>
-            <a href="">Listar Serviços</a>
+            <a <?php selecionadoMenu('listar-depoimentos'); ?> href="">Listar Depoimentos</a>
+            <a <?php selecionadoMenu('listar-servicos'); ?> href="">Listar Serviços</a>
             <h2>Administração do Painel</h2>
-            <a href="<?php echo INCLUDE_PATH_PAINEL; ?>editar-usuarios">Editar Usuario</a>
-            <a href="">Adcionar Usuarios</a>
+            <a <?php selecionadoMenu('editar-usuario'); ?> href="<?php echo INCLUDE_PATH_PAINEL; ?>editar-usuarios">Editar Usuario</a>
+            <a <?php selecionadoMenu('adicionar-usuarios'); ?> <?php verificarPermissaoMenu(2); ?> href="">Adicionar Usuarios</a>
             <h2>Configuração Geral</h2>
-            <a href="">Editar</a>
+            <a <?php selecionadoMenu('editar'); ?> href="">Editar</a>
         </div><!--itens-menu-->
     </div><!--menu-wrapper-->
 </div><!--menu-->

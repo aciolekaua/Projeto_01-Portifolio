@@ -45,5 +45,32 @@
                 echo '<div class="box-alert erro"><i class="fa-solid fa-xmark"></i> '.$mensagem.'</div>';
             }
         }
+
+        public static function imagemValida($imagem){
+            if($imagem['type'] == 'image/jpg' || $imagem['type'] == 'image/jpeg' || $imagem['type'] == 'image/png') {
+
+                $tamanho = intval($imagem['size'] / 1024);
+                if($tamanho < 300) {
+                    return true;
+                } else {
+                    return false;
+                }
+            } else {
+                return false;
+            }
+        }
+
+        public static function atualizarArquivo($file){
+            if(move_uploaded_file($file['tmp_name'],BASE_DIR_PAINEL.'/uploads/'.$file['name'])) {
+                return $file['name'];
+            } else {
+                return false;
+            }
+        }
+
+        public static function deleteArquivo($file){
+            @unlink('uploads/'.$file);
+            echo $file;
+        }
     }
 ?>
