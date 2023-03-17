@@ -1,0 +1,571 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+}
+
+html,body {
+    height: 100%;
+    background: rgb(225,225,225);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/*Página de login*/
+.box-login {
+    max-width: 600px;
+    width: 95%;
+    padding: 60px 2%;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transition: all ease 0.9s;
+
+}
+
+.box-login:hover {
+    box-shadow: 10px 10px 5px #888888;
+}
+
+.box-login h2 {
+    text-align: center;
+    font-size: 19px;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin: 10px 0;
+    color: black;
+}
+
+.box-login input[type=text],
+.box-login input[type=password] {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    padding-left: 8px;
+    margin-top: 8px;
+}
+
+.box-login input[type=submit] {
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    margin-top: 10px;
+    background: #1565c0;
+    border:none;
+    border-radius: 12px;
+    color: white;
+    transition: all ease 0.5s;
+    font-size: 14px;
+}
+
+.box-login input[type=submit]:hover {
+    background: #448aff;
+}
+
+/*Box-erro*/
+
+.box-erro {
+    width: 100%;
+    padding: 4px 2%;
+    text-align: center;
+    background: #f75353;
+    color: black;
+}
+
+/*Fim da Página de login*/
+
+/*Painel de controle*/
+
+
+.loggout {
+    float:right;
+}
+
+.loggout a {
+    padding: 0px 20px;
+    position: relative;
+    top: 4px;
+    text-decoration: none;
+}
+
+.loggout a > span {
+    font-size: 16px;
+    text-decoration: none;
+}
+
+header {
+    position: relative;
+    left: 300px;
+    padding: 10px 0;
+    background: #79809c;
+    width: calc(100% - 300px);
+}
+
+.clear {
+    clear: both;
+}
+
+.center {
+    padding: 0 2%;
+    margin: 0 auto;
+}
+
+
+.loggout {
+    float: right;
+}
+
+.loggout a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.loggout a > span {
+    font-size: 17px;
+}
+
+
+.menu {
+    overflow-x: hidden;
+    height: 100%;
+    float: left;
+    width: 300px;
+    background: #455a64;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    padding: 10px 0;
+}
+
+
+.menu-wrapper {
+    width: 300px;
+}
+
+.menu-btn {
+    float: left;
+    cursor: pointer;
+    font-size: 21px;
+    color: white;
+}
+
+
+.box-usuario {
+    text-align: center;
+}
+
+.avatar-usuario {
+    text-align: left;
+    display: inline-block;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 3px solid #2f3d42;
+}
+
+.avatar-usuario i {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    font-size: 50px;
+    color: #2f3d42;
+}
+
+.imagem-usuario {
+    display: inline-block;
+    width: 130px;
+    height: 130px;
+}
+
+.imagem-usuario img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 3px solid #2f3d42;
+}
+
+.nome-usuario {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.nome-usuario p {
+    font-weight: normal;
+    font-size: 18px;
+    color: white;
+}
+
+
+/*Fim do Painel de Controle*/
+
+/*Conteudo principal do Painel*/
+
+.w100{
+    width: 100%;
+}
+
+.w50 {
+    width: 49%;
+}
+
+.left {
+    float: left;
+}
+
+
+.rigth {
+    float: right;
+}
+
+.content {
+    width: calc(100% - 300px);
+    position: relative;
+    left: 300px;
+    padding: 10px;
+}
+
+.box-content {
+    background: white;
+    padding: 10px;
+    margin-bottom: 25px;
+}
+
+.box-content h2 {
+    font-weight: 300;
+    font-size: 23px;
+}
+
+.itens-menu {
+    margin-top: 30px;
+}
+
+.itens-menu h2 {
+    text-align: left;
+    font-weight: 300;
+    font-size: 18px;
+    background: #2f3d42;
+    color: white;
+    padding: 8px;
+}
+
+.itens-menu a {
+    display: block;
+    padding: 8px;
+    font-weight: 300;
+    font-size: 15px;
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid #2f3d42;
+}
+
+
+/*Tabelas*/
+
+.wrapper-table {
+    overflow-x: hidden;
+}
+
+table {
+    font-weight: 300;
+    min-height: 900px;
+    margin: 20px 0;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table tr:nth-of-type(1) {
+    background: #0091ea;
+    color: white;
+}
+
+table tr {
+    border-bottom: 1px solid #ccc;
+}
+
+table tr {
+    color: #555;
+}
+
+table td {
+    padding: 8px;
+}
+
+table a.btn {
+    font-weight: normal;
+    font-size: 13px;
+    color: white;
+    text-decoration: none;
+    padding: 4px 6px;        
+}
+
+a.btn.edit {
+    background: #f4b03e;
+}
+
+a.btn.delete {
+    background: #e05c4e;
+}
+
+a.btn.order {
+    background: #0091ea;
+}
+
+/*Paginação*/
+
+
+.paginacao {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.paginacao a {
+    font-size: 14px;
+    margin: 0px 8px;
+    display: inline-block;
+    padding: 3px 4px;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    color: #666;
+}
+
+.paginacao a.page-selected {
+    background: rgb(220,220,220);
+}
+
+/*Box metricas*/
+
+.box-metricas {
+    margin-top: 16px;
+    padding: 0px 15px;
+}
+
+.box-metricas-single {
+    float: left;
+    position: relative;
+    width: 33.3%;
+    background: #f4b03e;
+    border: 5px solid white;
+}
+
+.box-metricas .box-metricas-single:nth-of-type(2) {
+    background: #e05c4e;
+}
+
+.box-metricas .box-metricas-single:nth-of-type(3) {
+    background: #0091ea;
+}
+
+.box-metricas-wrapper {
+    padding: 10px 20px;
+    text-align: left;
+    color: white;
+}
+
+.box-metricas-wrapper p {
+    padding: 10px 0;
+    font-size: 26px;
+}
+
+/*Tabela Responsiva*/
+
+.table-responsive {
+    margin: 20px auto;
+    font-weight: 300;
+}
+
+.table-responsive .row:nth-of-type(1) {
+    font-weight: normal;
+    background: #00bfa5;
+    padding: 10px;
+    color: white;
+}
+
+.table-responsive .row {
+    color: #777;
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+.col {
+    float: left;
+    width: 50%;
+}
+
+/*Formularios de contato do box-content*/
+
+
+.box-content form {
+    margin: 30px 0;
+}
+
+.box-content form label {
+    font-size: 17px;
+    font-weight: 300;
+    color: black;
+    display: block;
+}
+
+.box-content .form-group {
+    margin: 15px 0;
+}
+
+.box-content form input[type=text],
+.box-content form input[type=password] {
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: normal;
+    color: black;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    padding-left: 8px;
+}
+
+.box-content form textarea {
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: normal;
+    color: black;
+    width: 100%;
+    height: 150px;
+    border: 1px solid #ccc;
+    padding-left: 8px;
+}
+
+.box-content form input[type=file] {
+    margin-top: 8px;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+.box-content form input[type=submit] {
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+    background: #00bfa5;
+    color: white;
+    border: 0;
+}
+
+
+/*Box Alerta*/
+
+.box-alert {
+    width: 100%;
+    padding: 8px 0;
+    text-align: center;
+}
+
+.sucesso {
+    background: #a5d6a7;
+    color: white;
+}
+
+.erro {
+    background: #f75353;
+    color: white;
+}
+
+/*Menu Selecionado*/
+
+.menu-active {
+    background: #3a4b51;
+}
+
+.menu-acrive::before {
+    /*Adcionar Seta para quando estiver selecionado*/
+}
+
+.form-group-login label {
+    font-size: 13px;
+    padding-right: 6px;
+    font-weight: 300;
+    color: black;
+}
+
+
+form .form-group-login:nth-of-type(2) {
+    position: relative;
+    top: 10px;
+}
+
+@media screen and (max-width:1200px) {
+    .box-metrica-single {
+       height: 100px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .box-metrica-single {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    .menu {
+        display: none;
+    }
+
+    .menu-wrapper {
+        width: 200px;
+    }
+
+    .content {
+        width: 100%;
+        left: 0;
+    }
+
+    header {
+        width: 100%;
+        left: 0;
+    }
+}
+
+@media screen and (max-width:500) {
+    .w50 {
+        width: 100%;
+    }
+
+    .box-metricas-single {
+        width: 100%;
+        padding-top: 40%;
+    }
+}
+
+
+@media screen and (max-width:400px) {
+    .menu-wrapper {
+        width: 200px;
+    }
+
+    .box-metricas-wrapper h2 {
+        font-size: 24px;
+    }
+
+    .box-metricas-wrapper p {
+        padding: 10px 0;
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width:380px) {
+    .itens-menu a {
+        font-size: 15px;
+    }
+}
