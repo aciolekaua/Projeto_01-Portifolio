@@ -2,11 +2,15 @@
     namespace Classes;
     use PDO;
     class Painel {
+
+        public static $cargos = array('0' => 'Normal','1' => 'Sub Admin', '2' => 'Admin');
+
         public static function logado(){
             return isset($_SESSION['login']) ? true : false;
         }
 
         public static function loggout(){
+            setcookie('lembrar','true',time()-1,'/');
             session_destroy();
             header('Location: '.INCLUDE_PATH_PAINEL);
         }
@@ -61,8 +65,10 @@
         }
 
         public static function atualizarArquivo($file){
+            $formatarArquivo = explode('.',$file['name']);
+            $imagemNome = uniqid().'.'.$formatarArquivo[count($formatarArquivo) - 1];
             if(move_uploaded_file($file['tmp_name'],BASE_DIR_PAINEL.'/uploads/'.$file['name'])) {
-                return $file['name'];
+                return $imagemNome;
             } else {
                 return false;
             }

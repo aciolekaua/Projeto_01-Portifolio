@@ -4,6 +4,7 @@
     require __DIR__.'/vendor/autoload.php';
     define('INCLUDE_PATH','http://localhost/Projeto_01/');
     define('INCLUDE_PATH_PAINEL',INCLUDE_PATH.'painel/');  
+    use Classes\Painel;
 
     //Conectar com o banco de dados.
     define('HOST','localhost');
@@ -14,13 +15,9 @@
     define('NOME_EMPRESA','Kauã Carlos');
     define('BASE_DIR_PAINEL',__DIR__.'/painel');
 
-
     //Funções do Painel
-
-    function pegaCargo($cargo){
-        $array = array('0' => 'Normal','1' => 'Sub Admin', '2' => 'Admin');
-
-        return $array[$cargo];
+    function pegaCargo($indice){
+        return Painel::$cargos[$indice];
     }
 
     function selecionadoMenu($par) {
@@ -43,7 +40,7 @@
             return;
         } else {
             include('painel/pages/permissao-negada.php');
-           die();
+			die();
         }
     }
 ?>

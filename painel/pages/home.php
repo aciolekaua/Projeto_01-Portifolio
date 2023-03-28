@@ -47,7 +47,7 @@ use Classes\Painel;
 
 <div class="clear"></div><!--clear-->
 
-<div class="box-content w100">
+<div class="box-content w100 rigth">
     <h2><i class="fa-solid fa-face-smile"></i> Usuarios Online</h2>
 
     <div class="table-responsive">

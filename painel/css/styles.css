@@ -421,6 +421,17 @@ a.btn.order {
     margin: 15px 0;
 }
 
+.box-content form select {
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: normal;
+    color: black;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    padding-left: 8px
+}
+
 .box-content form input[type=text],
 .box-content form input[type=password] {
     margin-top: 8px;

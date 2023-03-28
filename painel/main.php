@@ -44,8 +44,8 @@
             <a <?php selecionadoMenu('listar-depoimentos'); ?> href="">Listar Depoimentos</a>
             <a <?php selecionadoMenu('listar-servicos'); ?> href="">Listar Serviços</a>
             <h2>Administração do Painel</h2>
-            <a <?php selecionadoMenu('editar-usuario'); ?> href="<?php echo INCLUDE_PATH_PAINEL; ?>editar-usuarios">Editar Usuario</a>
-            <a <?php selecionadoMenu('adicionar-usuarios'); ?> <?php verificarPermissaoMenu(2); ?> href="">Adicionar Usuarios</a>
+            <a <?php selecionadoMenu('editar-usuarios'); ?> href="<?php echo INCLUDE_PATH_PAINEL; ?>editar-usuarios">Editar Usuario</a>
+            <a <?php selecionadoMenu('adicionar-usuarios'); ?> <?php verificarPermissaoMenu(2); ?> href="<?php echo INCLUDE_PATH_PAINEL; ?>adicionar-usuarios">Adicionar Usuarios</a>
             <h2>Configuração Geral</h2>
             <a <?php selecionadoMenu('editar'); ?> href="">Editar</a>
         </div><!--itens-menu-->
