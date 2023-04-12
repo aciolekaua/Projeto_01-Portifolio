@@ -279,7 +279,7 @@ header {
 
 table {
     font-weight: 300;
-    min-height: 900px;
+    /*min-height: 900px;*/
     margin: 20px 0;
     width: 100%;
     border-collapse: collapse;
@@ -453,6 +453,7 @@ a.btn.order {
     height: 150px;
     border: 1px solid #ccc;
     padding-left: 8px;
+    resize: vertical;
 }
 
 .box-content form input[type=file] {

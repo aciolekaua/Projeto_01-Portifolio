@@ -38,16 +38,17 @@
         <div class="itens-menu">
             <h2>Cadastro</h2>
             <a <?php selecionadoMenu('cadastrar-depoimentos'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-depoimentos">Cadastrar Depoimentos</a>
-            <a <?php selecionadoMenu('cadastrar-servicos'); ?> href="">Cadastrar Serviços</a>
-            <a <?php selecionadoMenu('cadastrar-slides'); ?> href="">Cadastrar Slides</a>
+            <a <?php selecionadoMenu('cadastrar-servicos'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-servicos">Cadastrar Serviços</a>
+            <a <?php selecionadoMenu('cadastrar-slides'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-slides">Cadastrar Slides</a>
             <h2>Gestão</h2>
-            <a <?php selecionadoMenu('listar-depoimentos'); ?> href="">Listar Depoimentos</a>
-            <a <?php selecionadoMenu('listar-servicos'); ?> href="">Listar Serviços</a>
+            <a <?php selecionadoMenu('listar-depoimentos'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>listar-depoimentos">Listar Depoimentos</a>
+            <a <?php selecionadoMenu('listar-servicos'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>listar-servicos">Listar Serviços</a>
+            <a <?php selecionadoMenu('listar-slides'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>listar-slides">Listar Slides</a>
             <h2>Administração do Painel</h2>
             <a <?php selecionadoMenu('editar-usuarios'); ?> href="<?php echo INCLUDE_PATH_PAINEL; ?>editar-usuarios">Editar Usuario</a>
-            <a <?php selecionadoMenu('adicionar-usuarios'); ?> <?php verificarPermissaoMenu(2); ?> href="<?php echo INCLUDE_PATH_PAINEL; ?>adicionar-usuarios">Adicionar Usuarios</a>
+            <a <?php selecionadoMenu('editar-usuarios'); ?> href="<?php echo INCLUDE_PATH_PAINEL; ?>editar-slides">Editar Usuario</a>            
             <h2>Configuração Geral</h2>
-            <a <?php selecionadoMenu('editar'); ?> href="">Editar</a>
+            <a <?php selecionadoMenu('editar'); ?> href="<?php echo INCLUDE_PATH_PAINEL; ?>editar-site">Editar</a>
         </div><!--itens-menu-->
     </div><!--menu-wrapper-->
 </div><!--menu-->
@@ -72,6 +73,7 @@
 
 <script src="https://kit.fontawesome.com/d6813c072e.js" crossorigin="anonymous" <?php echo INCLUDE_PATH;?>></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer" <?php echo INCLUDE_PATH;?>></script>
+<script src="js/jquery-mask.js" <?php echo INCLUDE_PATH_PAINEL ?>></script>
 <script src="js/main.js" <?php echo INCLUDE_PATH_PAINEL ?>></script>
 </body>
 </html>

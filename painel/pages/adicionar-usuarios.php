@@ -4,6 +4,7 @@ use Classes\Painel;
 use Classes\Usuario;
 ?>
 <div class="box-content">
+<h2><i class="fa-solid fa-pen"></i> Editar Usuarios</h2>
     <form method="post"  enctype="multipart/form-data">
         <?php 
             if(isset($_POST['acao'])) {

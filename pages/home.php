@@ -17,9 +17,8 @@
     <section class="descricao-autor">
         <div class="center">
             <div class="w50 left">
-                <h2>Kauã Carlos</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut erat ut est suscipit tempus. Morbi in porttitor magna. Pellentesque consequat ultrices libero, at dictum nisi vestibulum a. Integer accumsan felis tellus, quis hendrerit ex posuere ut. Vestibulum vel lorem interdum est porta euismod. Nullam mollis leo non sodales pretium. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi vel laoreet diam. Morbi urna sapien, vulputate ut felis vitae, efficitur malesuada purus. Praesent dictum mattis volutpat. Fusce luctus non ante et imperdiet. Quisque sit amet suscipit ligula. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam at tellus ac massa fringilla mattis.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut erat ut est suscipit tempus. Morbi in porttitor magna. Pellentesque consequat ultrices libero, at dictum nisi vestibulum a. Integer accumsan felis tellus, quis hendrerit ex posuere ut. Vestibulum vel lorem interdum est porta euismod. Nullam mollis leo non sodales pretium. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi vel laoreet diam. Morbi urna sapien, vulputate ut felis vitae, efficitur malesuada purus. Praesent dictum mattis volutpat. Fusce luctus non ante et imperdiet. Quisque sit amet suscipit ligula. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam at tellus ac massa fringilla mattis.</p>
+                <h2><?php echo $result['nome_autor']; ?></h2>
+                <p><?php echo $result['descricao']; ?></p>
             </div>
             <div class="w50 left">
                 <!--Pegar imagem depois-->
@@ -35,20 +34,20 @@
         <div class="center">
             <h2 class="title">Especialidades</h2>
             <div class="w33 left box-especialidades">
-                <h3><i class="fa-brands fa-css3"></i></h3>
+                <h3><i class="<?php echo $result['icone1'] ?>"></i></h3>
                 <h4>CSS3</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut erat ut est suscipit tempus. Morbi in porttitor magna. Pellentesque consequat ultrices libero,</p>
+                <p><?php echo $result['descricao1']; ?></p>
             </div>  
             <div class="w33 left box-especialidades">
-                <h3><i class="fa-brands fa-html5"></i></h3>
+                <h3><i class="<?php echo $result['icone2'] ?>"></i></h3>
                 <h4>HTML5</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut erat ut est suscipit tempus. Morbi in porttitor magna. Pellentesque consequat ultrices libero,</p>
+                <p><?php echo $result['descricao2']; ?></p>
             </div>  
             <div class="w33 left box-especialidades">
-                <h3><i class="fa-brands fa-js"></i></h3>
+                <h3><i class="<?php echo $result['icone3'] ?>"></i></h3>
                 <h4>JavaScript</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut erat ut est suscipit tempus. Morbi in porttitor magna. Pellentesque consequat ultrices libero,</p>
-            </div>  
+                <p><?php echo $result['descricao3']; ?></p>
+            </div>
             <div class="clear"></div>
         </div><!--center-->
     </section><!--Minha Especialidades-->
@@ -58,27 +57,33 @@
         <div class="center">
             <div id="depoimentos" class="w50 left depoimenos-container">
                 <h2 class="title">Depoimentos dos nossos Clientes</h2>
-                <div class="depoimentos-single">
-                    <p class="depoimentos-descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut erat ut est suscipit tempus. Morbi in porttitor magna. Pellentesque consequat ultrices libero, at dictum nisi vestibulum a. Integer accumsan felis tellus, quis hendrerit ex posuere ut. Vestibulum vel lorem interdum est</p>
-                    <p class="nome-autor">Lorem ipsum</p>
-                </div><!--depoimento-single-->
-                <div class="depoimentos-single">
-                    
-                    <p class="depoimentos-descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut erat ut est suscipit tempus. Morbi in porttitor magna. Pellentesque consequat ultrices libero, at dictum nisi vestibulum a. Integer accumsan felis tellus, quis hendrerit ex posuere ut. Vestibulum vel lorem interdum est</p>
-                </div><!--depoimento-single-->
-                <div class="depoimentos-single">
-                    <p class="depoimentos-descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut erat ut est suscipit tempus. Morbi in porttitor magna. Pellentesque consequat ultrices libero, at dictum nisi vestibulum a. Integer accumsan felis tellus, quis hendrerit ex posuere ut. Vestibulum vel lorem interdum est</p>
+                <?php 
+                    use Classes\MySql;
 
-                    <p class="nome-autor">Lorem ipsum</p>
+                    $sql = MySql::conectar()->prepare("SELECT * FROM `tb_site_depoimentos` ORDER BY order_id ASC LIMIT 3");
+                    $sql->execute();
+                    $depoimentos = $sql->fetchAll();
+                    foreach ($depoimentos as $key => $value) {
+                        
+                ?>
+                <div class="depoimentos-single">
+                    <p class="depoimentos-descricao"><?php echo $value['depoimentos']; ?></p>
+                    <p class="nome-autor"><?php echo $value['nome']; ?> - <?php echo $value['data']; ?></p>
                 </div><!--depoimento-single-->
+                <?php } ?>
             </div><!--w50-->
             <div id="servicos" class="w50 left servicos-container">
                 <h2 class="title">Serviços</h2>
                 <div class="servicos">
                     <ul>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut erat ut est suscipit tempus. Morbi in porttitor magna. Pellentesque consequat ultrices libero, at dictum nisi vestibulum a. Integer accumsan felis tellus, quis hendrerit ex posuere ut. Vestibulum vel lorem interdum est</li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut erat ut est suscipit tempus. Morbi in porttitor magna. Pellentesque consequat ultrices libero, at dictum nisi vestibulum a. Integer accumsan felis tellus, quis hendrerit ex posuere ut. Vestibulum vel lorem interdum est</li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut erat ut est suscipit tempus. Morbi in porttitor magna. Pellentesque consequat ultrices libero, at dictum nisi vestibulum a. Integer accumsan felis tellus, quis hendrerit ex posuere ut. Vestibulum vel lorem interdum est</li>
+                        <?php 
+                            $sql = MySql::conectar()->prepare("SELECT * FROM `tb_site_servicos` ORDER BY order_id ASC LIMIT 3");
+                            $sql->execute();
+                            $servicos = $sql->fetchAll();
+                            foreach ($servicos as $key => $value) {
+                        ?>
+                        <li><?php echo $value['servicos']; ?></li>
+                        <?php } ?>
                     </ul>
                 </div><!--servicos-->
             </div><!--w50-->
